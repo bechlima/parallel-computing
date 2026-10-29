@@ -16,6 +16,6 @@ out/
 *.ckpt
 *.sqlite*
 chroma_db/
-data/
+/data/
 backend/data/
 backend/SIX_Git_Sources/
