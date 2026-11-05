@@ -1,5 +1,11 @@
-# Parallel computing coursework
+# Accelerating Matrix Computations on GPUs and Clusters
 
-Recovered C/MPI/OpenMP and CUDA assignment sources. `mpi-openmp/` contains the A2 working files and grouped submission; `cuda/` contains A3 sources and its Makefile. Original alternatives are preserved rather than silently choosing a final submission.
+EPFL parallel computing coursework (2026), written in C and CUDA, using MPI, OpenMP and Slurm.
 
-Requires the appropriate MPI/OpenMP or CUDA toolchains; builds and performance claims have not been revalidated. Coursework contributions and supplied scaffolding retain their original attribution. Prepared for private archival; public sharing permissions have not been established.
+- `mpi-openmp/`: sequential, OpenMP and hybrid MPI+OpenMP implementations of matrix workloads (`rmm*.c`, `prog*.c`), with a verification script. `a2_GROUPID/` is the grouped submission; the top-level files are working versions.
+- `cuda/`: GPU kernels for matrix computation (`rmm.cu`, `assignment3.cu`), plus a Makefile and a Slurm job script (`execute.sh`).
+
+## Build
+Needs an MPI implementation with OpenMP support (e.g. `mpicc -fopenmp`) and the CUDA toolkit (`make` in `cuda/`). The scripts target EPFL's SCITAS clusters, so they may need adjusting elsewhere.
+
+Course-supplied scaffolding remains the property of the course staff.
